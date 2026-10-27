@@ -1,0 +1,23 @@
+{
+  "name": "QuantHack — finance quantitative",
+  "short_name": "QuantHack",
+  "description": "Parcours interactif de finance : rooms, quiz, Python et flashcards.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0c111c",
+  "theme_color": "#0c111c",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "quanthack-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "quanthack-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
