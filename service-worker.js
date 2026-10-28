@@ -1,6 +1,6 @@
 // Quants Court Studio — version 2026-10-28. Network-first for navigation to refresh installed apps.
-const CACHE = 'quants-court-studio-rooms-v5';
-const CORE = ['./','./index.html','./classic.html','./rooms.js','./app.js','./style.css','./manifest.webmanifest','./quants-court.svg','./studio-upgrades.css','./studio-upgrades.js','./studio-rooms.js','./studio-rooms.css','./studio-f0.js','./studio-f0.css','./mascotte-quants-court.png','./quants-court-icon-192.png'];
+const CACHE = 'quants-court-studio-alm-v6';
+const CORE = ['./','./index.html','./classic.html','./rooms.js','./app.js','./style.css','./manifest.webmanifest','./quants-court.svg','./studio-upgrades.css','./studio-upgrades.js','./studio-rooms.js','./studio-rooms.css','./studio-f0.js','./studio-f0.css','./studio-alm.js','./studio-alm.css','./mascotte-quants-court.png','./quants-court-icon-192.png'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE && (k.startsWith('quanthack-') || k.startsWith('quants-court-'))).map(k => caches.delete(k)))).then(() => self.clients.claim())));
 self.addEventListener('fetch', event => {
