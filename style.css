@@ -18,3 +18,23 @@
 @media(pointer:coarse){button,.btn,.mobile-tabs a,.nav-primary a,.side-room{min-height:44px}select,.task-input,.search-input,.code-editor{font-size:16px}.move{min-width:44px;min-height:44px}.icon-btn{min-width:44px;min-height:44px}}
 @media(min-width:761px) and (max-width:1024px){.workspace{display:block}.sidebar{display:none}.main{padding:26px 26px 112px}.mobile-tabs{display:grid;position:fixed;z-index:50;bottom:0;left:0;right:0;grid-template-columns:repeat(4,1fr);background:var(--panel);border-top:1px solid var(--bd);padding:11px 16px calc(11px + env(safe-area-inset-bottom,0px))}.mobile-tabs a{text-align:center;padding:8px;color:var(--muted);font:12px var(--mono)}.mobile-tabs a.active{color:var(--mint)}.intro-cols{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.code-editor{font-size:16px}.main{padding-bottom:calc(112px + env(safe-area-inset-bottom,0px))}}
+
+/* F0: sommaire compact et chapitres repliables, optimisés pour l'iPad */
+.f0-toc{border:1px solid var(--bd);background:var(--card);border-radius:12px;padding:20px;margin:22px 0}
+.f0-toc-heading{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.f0-toc-heading b{font:600 11px var(--mono);letter-spacing:.08em;color:var(--mint)}
+.f0-toc-heading span{font-size:12px;color:var(--muted)}
+.f0-toc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:16px}
+.toc-link{text-align:left;background:var(--card2);border:1px solid var(--bd);border-radius:8px;color:var(--txt);font-size:12px;line-height:1.45;padding:11px 13px;cursor:pointer;min-height:44px}
+.toc-link:hover,.toc-link:focus-visible{border-color:var(--mint);outline-offset:2px}
+.f0-lesson{padding:0;scroll-margin-top:92px}
+.f0-lesson summary{display:flex;justify-content:space-between;gap:12px;align-items:center;cursor:pointer;list-style:none;color:var(--mint);font-weight:700;font-size:15px;padding:18px 22px}
+.f0-lesson summary::-webkit-details-marker{display:none}
+.f0-lesson[open] summary{border-bottom:1px solid var(--bd)}
+.f0-chevron{font-size:22px;color:var(--muted);transition:transform .15s}
+.f0-lesson[open] .f0-chevron{transform:rotate(180deg)}
+.f0-lesson-body{padding:6px 22px 20px}
+.f0-lesson-body p{line-height:1.75}
+.f0-lesson-body small{color:var(--muted);font-size:11px}
+#missions{scroll-margin-top:95px}
+@media(max-width:680px){.f0-toc-grid{grid-template-columns:1fr}.f0-toc{padding:15px}.f0-lesson summary{padding:17px}.f0-lesson-body{padding:6px 17px 18px}}
