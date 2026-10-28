@@ -1,12 +1,12 @@
 {
-  "name": "QuantHack — finance quantitative",
-  "short_name": "QuantHack",
-  "description": "Parcours interactif de finance : rooms, quiz, Python et flashcards.",
+  "name": "Quants Court — Studio des marchés",
+  "short_name": "Quants Court",
+  "description": "Cours de finance quantitative, notions illustrées, quiz, code et flashcards",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0c111c",
-  "theme_color": "#0c111c",
+  "background_color": "#09121e",
+  "theme_color": "#09121e",
   "lang": "fr",
   "icons": [
     {

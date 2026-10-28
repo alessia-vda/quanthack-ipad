@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c111c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="QuantHack">
+  <link rel="apple-touch-icon" href="quanthack-icon-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="quanthack-icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="description" content="QuantHack — apprendre la finance quantitative par rooms, quiz, code et flashcards.">
+  <title>QuantHack — Learning terminal</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{typeset:false}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" onload="window.QHmathAvailable=true; window.mathJaxLoaded?.()"></script>
+  <script defer src="rooms.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="register-sw.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#/" aria-label="QuantHack accueil"><span class="logo-mark">Q<span>·</span></span><span>Quant<span class="bright">Hack</span><small>THE FINANCIAL LEARNING TERMINAL</small></span></a>
+    <div class="desktop-top-note"><span class="live-dot"></span> IPAD / WEB COMPATIBLE <span class="version">v1.3 · F0 UNIVERSITAIRE</span></div>
+    <div class="top-actions"><button id="exportQuick" class="icon-btn" title="Exporter la progression" aria-label="Exporter la progression">⇩</button><button id="themeBtn" class="icon-btn" title="Changer le thème" aria-label="Changer le thème">☾</button><div id="topXP" class="top-xp">✦ 0 XP</div></div>
+  </header>
+  <div class="workspace">
+    <aside class="sidebar" aria-label="Menu principal">
+      <div class="sidebar-inner">
+        <div class="side-kicker">WORKSPACE</div>
+        <nav class="nav-primary">
+          <a href="#/" data-nav="home"><span class="nav-icon">▦</span> Tableau de bord</a>
+          <a href="#/parcours" data-nav="parcours"><span class="nav-icon">◇</span> Parcours</a>
+          <a href="#/flashcards" data-nav="flashcards"><span class="nav-icon">▣</span> Flashcards <span id="dueCounter" class="side-count">0</span></a>
+          <a href="#/glossaire" data-nav="glossaire"><span class="nav-icon">⌕</span> Glossaire</a>
+        </nav>
+        <div class="side-divider"></div>
+        <div class="side-kicker side-row">TON PARCOURS <span>0 / 9</span></div>
+        <div id="sideRooms" class="side-rooms"></div>
+        <div class="side-bottom">
+          <div class="s-badge"><span>✧</span><div><b id="sideRank">STAGIAIRE</b><small id="sideLevel">Niveau 01</small></div></div>
+          <div class="side-xp-line"><div id="sideProgress"></div></div>
+          <div class="sidebar-meta"><span id="sideStreak">0 jour de série</span><span id="sideTotal">0 XP</span></div>
+        </div>
+      </div>
+    </aside>
+    <main id="app" class="main" tabindex="-1" aria-live="polite"></main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <footer class="mobile-tabs"><a href="#/">Accueil</a><a href="#/parcours">Rooms</a><a href="#/flashcards">Cartes</a><a href="#/glossaire">Lexique</a></footer>
+</body>
+</html>
