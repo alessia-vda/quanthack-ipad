@@ -1,5 +1,5 @@
 {
-  "name": "Quants Court — Studio des marchés",
+  "name": "Quants Court — Studio financier",
   "short_name": "Quants Court",
   "description": "Cours de finance quantitative, notions illustrées, quiz, code et flashcards",
   "start_url": "./",
@@ -10,12 +10,12 @@
   "lang": "fr",
   "icons": [
     {
-      "src": "quanthack-icon-192.png",
+      "src": "quants-court-icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "quanthack-icon-512.png",
+      "src": "quants-court-icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

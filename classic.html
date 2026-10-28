@@ -20,8 +20,21 @@
   <script defer src="rooms.js"></script>
   <script defer src="app.js"></script>
   <script defer src="register-sw.js"></script>
-</head>
-<body>
+<style>
+html.embedded .topbar,html.embedded .sidebar,html.embedded .mobile-tabs{display:none!important}
+html.embedded .workspace{display:block!important;min-height:0!important}
+html.embedded .main{max-width:none!important;padding:26px clamp(12px,3vw,32px) 42px!important}
+html.embedded .hero{min-height:0}
+html.embedded .room-grid{grid-template-columns:repeat(auto-fill,minmax(205px,1fr))}
+html.embedded .stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+html.embedded body{background:transparent}
+html.embedded .main{background:transparent}
+html.embedded .browser-message{display:none}
+body:not(.embedded) .studio-return{position:sticky;top:0;z-index:50;background:#10233b;color:#b9f3dc;padding:12px 25px;font-size:14px;border-bottom:1px solid #416374}
+.studio-return a{font-weight:700;text-decoration:underline;color:#b9f3dc}
+@media(max-width:700px){html.embedded .stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}html.embedded .intro-cols{grid-template-columns:1fr}}
+</style><script>if(new URLSearchParams(location.search).has('embed'))document.documentElement.classList.add('embedded');</script></head>
+<body><div class="studio-return"><a href="./#/rooms" target="_top">← Revenir au Studio Quants Court</a></div><script>if(document.documentElement.classList.contains("embedded"))document.querySelector(".studio-return").style.display="none";</script>
   <header class="topbar">
     <a class="logo" href="#/" aria-label="QuantHack accueil"><span class="logo-mark">Q<span>·</span></span><span>Quant<span class="bright">Hack</span><small>THE FINANCIAL LEARNING TERMINAL</small></span></a>
     <div class="desktop-top-note"><span class="live-dot"></span> IPAD / WEB COMPATIBLE <span class="version">v1.3 · F0 UNIVERSITAIRE</span></div>
@@ -51,5 +64,11 @@
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <footer class="mobile-tabs"><a href="#/">Accueil</a><a href="#/parcours">Rooms</a><a href="#/flashcards">Cartes</a><a href="#/glossaire">Lexique</a></footer>
-</body>
+<script>
+if(document.documentElement.classList.contains('embedded')){
+ const report=()=>{const m=document.querySelector('.main');if(m&&window.parent!==window)window.parent.postMessage({qcClassicHeight:Math.max(750,Math.ceil(m.scrollHeight+40))},location.origin)};
+ new MutationObserver(()=>requestAnimationFrame(report)).observe(document.getElementById('app'),{childList:true,subtree:false});
+ window.addEventListener('load',report);window.addEventListener('hashchange',()=>setTimeout(report,50));
+}
+</script></body>
 </html>
