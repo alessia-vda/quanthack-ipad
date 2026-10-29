@@ -1,0 +1,20 @@
+/* Quants Court V6.6 — ALM, explications pas à pas. Respecte la DA Studio. */
+.alm-v66-gloss{padding:clamp(16px,2.4vw,26px);border:1px solid var(--line);background:linear-gradient(135deg,var(--panel2),var(--panel));border-radius:18px;margin:18px 0 28px;line-height:1.65}
+.alm-v66-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0}
+.alm-v66-cols>div{padding:16px;border:1px solid var(--line);background:var(--panel);border-radius:14px;min-width:0}
+.alm-v66-cols strong{color:var(--mint);font-size:17px}
+.alm-v66-cols p{margin:10px 0 0;font-size:14px;line-height:1.6;color:var(--soft)}
+.alm-v66-cols b{color:var(--ink)}
+.alm-v66-foot,.alm-v66-gloss>p{font-size:14px;color:var(--soft);margin:12px 0 0}
+.alm-v66-foot b,.alm-v66-gloss>p b{color:var(--ink)}
+.alm-v66-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:20px 0}
+.alm-v66-side{padding:15px;background:var(--panel);border-radius:14px;display:flex;flex-direction:column;gap:7px}
+.alm-v66-side>span{font-size:10px;letter-spacing:.12em;font-weight:800;color:var(--quiet)}
+.alm-v66-side>strong{font-size:clamp(23px,3vw,34px);font-weight:650;line-height:1.15;color:var(--ink)}
+.alm-v66-side small{color:var(--soft);line-height:1.4}
+.alm-v66-bar{height:14px;border-radius:20px;min-width:0}
+.alm-v66-assets{width:100%;background:linear-gradient(90deg,var(--mint),var(--blue))}
+.alm-v66-liabilities{width:95.238%;background:linear-gradient(90deg,var(--lav),var(--blue))}
+.alm-v66-equation{display:flex;gap:7px 20px;flex-wrap:wrap;align-items:baseline;padding:14px 16px;border-radius:13px;background:var(--m2);color:var(--mint)}
+.alm-v66-equation b{font-size:22px}.alm-v66-equation span{font-size:13px}
+@media(max-width:700px){.alm-v66-cols,.alm-v66-compare{grid-template-columns:1fr}.alm-v66-gloss{padding:15px}}
